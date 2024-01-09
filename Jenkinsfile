@@ -1,15 +1,16 @@
 pipeline {
-  agent any
-  stages {
-    stage('version') {
-      steps {
-        sh 'python3 --version'
-      }
+    agent any
+    stages {
+        stage('version') {
+            steps {
+                echo 'Running Python version:'
+                sh 'python --version'
+            }
+        }
+        stage('hello') {
+            steps {
+                echo 'Hello, World!'
+            }
+        }
     }
-    stage('hello') {
-      steps {
-        sh 'python3 apilink.py'
-      }
-    }
-  }
 }
