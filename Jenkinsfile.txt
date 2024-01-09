@@ -8,7 +8,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'python3 api-link.py'
+        sh 'python3 apilink.py'
       }
     }
   }
